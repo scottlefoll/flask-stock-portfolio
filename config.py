@@ -28,8 +28,10 @@ class Config(object):
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     MAIL_USERNAME = os.getenv('MAIL_USERNAME', default='')
+    print(MAIL_USERNAME)
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD', default='')
     MAIL_DEFAULT_SENDER = os.getenv('MAIL_USERNAME', default='')
+    print(MAIL_DEFAULT_SENDER)
 
     # Alpha Vantage API Key
     ALPHA_VANTAGE_API_KEY = os.getenv('ALPHA_VANTAGE_API_KEY', default='demo')

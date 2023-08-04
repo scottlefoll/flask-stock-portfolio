@@ -89,8 +89,6 @@ NOTE: If working on Windows, use `set` instead of `export`.
 
 ### Alpha Vantage API Key
 
-The Alpha Vantage API key is used to access the Alpha Vantage service to retrieve stock data.
-
 In order to use the Alpha Vantage API, sign up for a free API key at:
 [Alpha Vantage API Key](https://www.alphavantage.co/support/#api-key)
 

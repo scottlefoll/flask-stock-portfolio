@@ -1,8 +1,7 @@
-Python==3.11.3
-Flask=2.3.2
+Flask==2.3.2
 pydantic==1.10.7
 pytest==7.3.1
-flake8=5.0.0
+flake8==5.0.0
 pytest-cov==4.0.0
 Flask-SQLAlchemy==3.0.3
 Flask-Migrate==4.0.4

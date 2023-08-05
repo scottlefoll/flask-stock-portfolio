@@ -1,7 +1,6 @@
 import os
 from datetime import timedelta
 
-
 # Determine the folder of the top-level directory of this project
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -21,7 +20,6 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     WTF_CSRF_ENABLED = True
     REMEMBER_COOKIE_DURATION = timedelta(days=14)
-
     # Flask-Mail Configuration - GMail
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465

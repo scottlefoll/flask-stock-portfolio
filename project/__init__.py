@@ -1,9 +1,10 @@
 from flask import Flask, render_template
+from flask_admin import Admin
+from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import RotatingFileHandler
 import logging
 from flask.logging import default_handler
 import os
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
@@ -47,7 +48,7 @@ def create_app():
     # Configure the Flask application
     config_type = os.getenv('CONFIG_TYPE', default='config.DevelopmentConfig')
     app.config.from_object(config_type)
-
+    # admin2 = Admin(app, name='My Admin Panel2', template_mode='bootstrap4')
     initialize_extensions(app)
     register_blueprints(app)
     configure_logging(app)

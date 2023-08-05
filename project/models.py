@@ -205,9 +205,9 @@ class User(flask_login.UserMixin, database.Model):
     password_hashed = mapped_column(String(128))
     registered_on = mapped_column(DateTime())
     email_confirmation_sent_on = mapped_column(DateTime())
-    email_confirmed = mapped_column(Boolean(), default=False)
+    email_confirmed = mapped_column(Boolean, default=True)
     email_confirmed_on = mapped_column(DateTime())
-    user_type = mapped_column(String(10), default='User')
+    user_type = mapped_column(String(10), default='Admin')
 
     # Define the relationship to the `Stock` class
     stocks_relationship = relationship('Stock', back_populates='user_relationship')

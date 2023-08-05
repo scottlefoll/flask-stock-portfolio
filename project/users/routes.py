@@ -145,7 +145,7 @@ def logout():
 @users_blueprint.route('/profile')
 @login_required
 def user_profile():
-    return render_template('users/profile.html')
+    return render_template('users/profile.html', user=current_user)
 
 
 @users_blueprint.route('/confirm/<token>')

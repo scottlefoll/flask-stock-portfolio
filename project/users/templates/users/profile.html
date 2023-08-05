@@ -22,6 +22,7 @@
   </div>
   <div class="card-body">
     <p>Joined on {{ current_user.registered_on.strftime("%A, %B %d, %Y") }}</p>
+                 {{ user.registered_on.strftime("%Y-%m-%d") }}
     {% if current_user.email_confirmed %}
       <p>Email address confirmed on {{ current_user.email_confirmed_on.strftime("%A, %B %d, %Y") }}</p>
     {% else %}

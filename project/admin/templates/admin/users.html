@@ -29,12 +29,12 @@
         <tr>
           <td>{{ user.id }}</td>
           <td>{{ user.email }}</td>
-          <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td>
-          {%  if user.email_confirmed %}
-            <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td>
-          {% else %}
-            <td>-</td>
-          {% endif %}
+          <!-- <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td> -->
+            {% if user.email_confirmed == True and user.registered_on is not none %}
+                <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td>
+            {% else %}
+                <td>N/A</td>
+            {% endif %}
           <td>{{ user.user_type }}</td>
           <td>{{ user.number_of_stocks_in_portfolio }}</td>
           <td>{{ user.number_of_stocks_in_watchlist }}</td>

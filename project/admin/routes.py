@@ -41,7 +41,9 @@ def admin_before_request():
 
 @admin_blueprint.route('/users')
 def admin_list_users():
+    print('admin_list_users')
     users = User.query.order_by(User.id).all()
+    print('Users =' users)
     for user in users:
         user.number_of_stocks_in_portfolio = len(Stock.query.filter_by(user_id=user.id).all())
         user.number_of_stocks_in_watchlist = len(WatchStock.query.filter_by(user_id=user.id).all())

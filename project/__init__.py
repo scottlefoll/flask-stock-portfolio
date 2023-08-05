@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from flask_admin import Admin
 from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import RotatingFileHandler
 import logging

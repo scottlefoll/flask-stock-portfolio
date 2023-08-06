@@ -31,7 +31,7 @@
           <td>{{ user.email }}</td>
           <!-- <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td> -->
             {% if user.email_confirmed == True and user.registered_on is not none %}
-                <td>{{ user.registered_on.strftime("%Y-%m-%d") }}</td>
+                <td>{{ user.registered_on.strftime("%Y-%m-%d") if user.registered_on else 'N/A' }}</td>
             {% else %}
                 <td>N/A</td>
             {% endif %}
